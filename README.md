@@ -1,2 +1,3 @@
 # Meeting-Notes-Summarizer
-AI-Powered Meeting Notes Summarizer using Open AI
+AI-Powered Meeting Notes Summarizer using Open AI :) 
+
