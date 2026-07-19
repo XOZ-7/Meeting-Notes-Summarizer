@@ -1,0 +1,646 @@
+/* ==========================================================================
+   Meeting Notes Summarizer — Stylesheet
+   Colors, spacing, and layout follow the design reference exactly.
+   ========================================================================== */
+
+:root {
+  --bg: #FAFAFA;
+  --card-bg: #FFFFFF;
+  --text-primary: #171717;
+  --text-secondary: #737373;
+  --text-muted: #A3A3A3;
+  --border: #E5E5E5;
+  --btn-primary: #111111;
+  --btn-primary-hover: #262626;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  --radius-card: 16px;
+  --radius-md: 10px;
+  --radius-sm: 8px;
+  --max-width: 1400px;
+  --transition: 150ms ease;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+.navbar {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 72px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-badge {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  background: var(--btn-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-titles h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.navbar-titles p {
+  font-size: 13px;
+  margin: 2px 0 0;
+  color: var(--text-secondary);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition), opacity var(--transition);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-outline {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  background: #F5F5F5;
+}
+
+.btn-primary {
+  background: var(--btn-primary);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background: var(--btn-primary-hover);
+}
+
+/* ==========================================================================
+   Workspace layout
+   ========================================================================== */
+
+.workspace {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 32px;
+  align-items: start;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow);
+}
+
+.left-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- card header (badge + heading) ---- */
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.badge-circle {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: #F0F0F0;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--text-primary);
+}
+
+.subheading {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ---- tabs ---- */
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 16px;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color var(--transition);
+}
+
+.tab-btn.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-primary);
+}
+
+.tab-btn:hover:not(.active) {
+  color: var(--text-secondary);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* ---- textarea ---- */
+
+.textarea-wrap {
+  position: relative;
+}
+
+textarea#notesInput {
+  width: 100%;
+  min-height: 260px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  padding-bottom: 32px;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--text-primary);
+  background: var(--card-bg);
+  transition: border-color var(--transition);
+}
+
+textarea#notesInput::placeholder {
+  color: var(--text-muted);
+}
+
+textarea#notesInput:focus {
+  outline: none;
+  border-color: #B5B5B5;
+}
+
+.char-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--card-bg);
+  padding: 0 2px;
+}
+
+.char-counter.limit-reached {
+  color: #171717;
+  font-weight: 600;
+}
+
+/* ---- upload / dropzone ---- */
+
+.dropzone {
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.dropzone.dragover {
+  border-color: #A3A3A3;
+  background: #F7F7F7;
+}
+
+.dropzone-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-muted);
+}
+
+.dropzone-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.dropzone-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 2px 0 0;
+}
+
+.file-selected {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-primary);
+  background: #F5F5F5;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.file-selected span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-selected button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.file-selected button:hover {
+  color: var(--text-primary);
+}
+
+/* ---- tips card ---- */
+
+.tips-card {
+  background: #FAFAFA;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-secondary);
+}
+
+.tips-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 2px;
+}
+
+.tips-body {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ---- error banner ---- */
+
+.error-banner {
+  font-size: 13px;
+  color: #171717;
+  background: #F5F5F5;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+/* ---- generate button ---- */
+
+.btn-generate {
+  width: 100%;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: var(--btn-primary);
+  color: #FFFFFF;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), opacity var(--transition), transform var(--transition);
+}
+
+.btn-generate:hover:not(:disabled) {
+  background: var(--btn-primary-hover);
+}
+
+.btn-generate:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.btn-generate:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-content, .btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #FFFFFF;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- privacy note ---- */
+
+.privacy-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Right column — result cards
+   ========================================================================== */
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-card {
+  padding: 22px 24px;
+}
+
+.result-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.result-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.result-card-header h3 {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color var(--transition), background var(--transition);
+}
+
+.copy-btn:hover {
+  color: var(--text-primary);
+  background: #F5F5F5;
+}
+
+.result-body {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.result-body.filled {
+  color: var(--text-primary);
+}
+
+.result-list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.result-list.filled li {
+  color: var(--text-primary);
+}
+
+/* ---- token usage ---- */
+
+.token-usage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.token-usage-col {
+  text-align: left;
+  padding: 4px 16px;
+  border-left: 1px solid var(--border);
+}
+
+.token-usage-col:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.token-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0 0 6px;
+}
+
+.token-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 0 40px 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Toast
+   ========================================================================== */
+
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--btn-primary);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+  z-index: 100;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar-inner {
+    padding: 0 20px;
+  }
+
+  .workspace {
+    padding: 20px;
+  }
+
+  .navbar-titles p {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar-right .btn span,
+  .navbar-right .btn {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .dropzone {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropzone .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
