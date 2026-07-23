@@ -2,7 +2,7 @@
 Meeting Notes Summarizer - Flask Backend
 ------------------------------------------
 Handles Flask routes, request validation, and returns structured JSON responses.
-LLM interaction is delegated to `llm_client.py`.
+Delegates model inference cleanly to `llm_client.py`.
 """
 
 import os
@@ -13,7 +13,7 @@ from llm_client import generate_summary
 app = Flask(__name__)
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
-app.config["MAX_CONTENT_LENGTH"] = MAX_FILE_SIZE_BYTES + (1 * 1024 * 1024)  # Small buffer for form overhead
+app.config["MAX_CONTENT_LENGTH"] = MAX_FILE_SIZE_BYTES + (1 * 1024 * 1024)  # Buffer for form overhead
 
 
 def allowed_file(filename: str) -> bool:
@@ -21,9 +21,6 @@ def allowed_file(filename: str) -> bool:
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-# ---------------------------------------------------------------------------
-# Routes
-# ---------------------------------------------------------------------------
 @app.route("/")
 def index():
     """Serve the main interface."""
@@ -33,11 +30,8 @@ def index():
 @app.route("/generate", methods=["POST"])
 def generate():
     """
-    Accepts either:
-      - form field 'notes' (pasted text), OR
-      - uploaded file field 'file' (.txt)
-
-    Delegates processing to `llm_client.generate_summary`.
+    Accepts meeting notes via form text or .txt file upload and delegates 
+    to llm_client.generate_summary().
     """
     notes_text = (request.form.get("notes") or "").strip()
     uploaded_file = request.files.get("file")
@@ -45,7 +39,6 @@ def generate():
     has_text = bool(notes_text)
     has_file = uploaded_file is not None and uploaded_file.filename != ""
 
-    # Validation: Neither text nor file provided
     if not has_text and not has_file:
         return jsonify({"error": "Please paste meeting notes or upload a .txt file."}), 400
 
@@ -55,7 +48,6 @@ def generate():
         if not allowed_file(uploaded_file.filename):
             return jsonify({"error": "Only .txt files are supported."}), 400
 
-        # Validate file size explicitly
         uploaded_file.seek(0, os.SEEK_END)
         file_size = uploaded_file.tell()
         uploaded_file.seek(0)
@@ -74,7 +66,6 @@ def generate():
     if len(final_text) > MAX_CHARACTERS:
         return jsonify({"error": f"Notes exceed the maximum of {MAX_CHARACTERS} characters."}), 400
 
-    # Clean delegation to LLM layer
     result = generate_summary(final_text)
     return jsonify(result), 200
 
