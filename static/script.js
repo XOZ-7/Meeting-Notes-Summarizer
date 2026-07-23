@@ -46,7 +46,7 @@
   // ---- State ---------------------------------------------------------------
   let activeTab = "paste";
   let selectedFile = null;
-  let lastResult = null; // holds the most recent successful /generate response
+  let lastResult = null;
 
   const EMPTY_TEXT = {
     summary: "Your summary will appear here...",
@@ -54,6 +54,10 @@
     key_decisions: ["Your key decisions will appear here..."],
     open_questions: ["Your open questions will appear here..."],
   };
+
+  // Reset initial UI states
+  setLoading(false);
+  resetFileSelection();
 
   // ==========================================================================
   // Tabs
@@ -112,9 +116,7 @@
   });
 
   fileRemoveBtn.addEventListener("click", () => {
-    selectedFile = null;
-    fileInput.value = "";
-    fileSelected.hidden = true;
+    resetFileSelection();
     hideError();
   });
 
@@ -134,6 +136,14 @@
     selectedFile = file;
     fileSelectedName.textContent = file.name;
     fileSelected.hidden = false;
+    fileSelected.style.display = "flex";
+  }
+
+  function resetFileSelection() {
+    selectedFile = null;
+    fileInput.value = "";
+    fileSelected.hidden = true;
+    fileSelected.style.display = "none";
   }
 
   // ==========================================================================
@@ -202,37 +212,71 @@
 
   function setLoading(isLoading) {
     generateBtn.disabled = isLoading;
-    btnContent.hidden = isLoading;
-    btnLoading.hidden = !isLoading;
+    if (isLoading) {
+      btnContent.style.display = "none";
+      btnLoading.style.display = "inline-flex";
+      btnLoading.removeAttribute("hidden");
+    } else {
+      btnContent.style.display = "inline-flex";
+      btnLoading.style.display = "none";
+      btnLoading.setAttribute("hidden", "true");
+    }
   }
 
   // ==========================================================================
   // Render results into cards
   // ==========================================================================
   function renderResults(data) {
-    summaryOutput.textContent = data.summary || EMPTY_TEXT.summary;
-    summaryOutput.classList.add("filled");
+  summaryOutput.textContent = data.summary || "No summary generated.";
+  summaryOutput.classList.add("filled");
 
-    fillList(actionItemsOutput, data.action_items, EMPTY_TEXT.action_items);
-    fillList(keyDecisionsOutput, data.key_decisions, EMPTY_TEXT.key_decisions);
-    fillList(openQuestionsOutput, data.open_questions, EMPTY_TEXT.open_questions);
+  fillList("action_items", actionItemsOutput, data.action_items, "No action items identified.");
+  fillList("key_decisions", keyDecisionsOutput, data.key_decisions, "No key decisions recorded.");
+  fillList("open_questions", openQuestionsOutput, data.open_questions, "No open questions identified.");
 
-    const usage = data.token_usage || {};
-    tokenInput.textContent = usage.input ?? "--";
-    tokenOutput.textContent = usage.output ?? "--";
-    tokenTotal.textContent = usage.total ?? "--";
-  }
+  const usage = data.token_usage || {};
+  tokenInput.textContent = usage.input ?? "--";
+  tokenOutput.textContent = usage.output ?? "--";
+  tokenTotal.textContent = usage.total ?? "--";
+}
 
-  function fillList(listEl, items, fallbackItems) {
-    const values = items && items.length ? items : fallbackItems;
-    listEl.innerHTML = "";
-    values.forEach((text) => {
+  function fillList(cardKey, listEl, items, emptyMessage) {
+  listEl.innerHTML = "";
+  const hasItems = Array.isArray(items) && items.length > 0;
+  
+  // Get copy button corresponding to this card
+  const copyBtn = document.querySelector(`.copy-btn[data-copy-target="${cardKey}"]`);
+
+  if (hasItems) {
+    items.forEach((text) => {
       const li = document.createElement("li");
       li.textContent = text;
       listEl.appendChild(li);
     });
-    listEl.classList.toggle("filled", Boolean(items && items.length));
+    listEl.classList.add("filled");
+    
+    // Enable copy button when items exist
+    if (copyBtn) {
+      copyBtn.disabled = false;
+      copyBtn.style.opacity = "1";
+      copyBtn.style.cursor = "pointer";
+    }
+  } else {
+    const li = document.createElement("li");
+    li.textContent = emptyMessage;
+    li.style.listStyleType = "none"; // Clean look for empty state
+    li.style.color = "var(--text-muted)";
+    listEl.appendChild(li);
+    listEl.classList.remove("filled");
+
+    // Disable copy button so it's not copyable!
+    if (copyBtn) {
+      copyBtn.disabled = true;
+      copyBtn.style.opacity = "0.3";
+      copyBtn.style.cursor = "not-allowed";
+    }
   }
+}
 
   // ==========================================================================
   // Clear All
@@ -242,18 +286,16 @@
     charCounter.textContent = `0 / ${MAX_CHARACTERS} characters`;
     charCounter.classList.remove("limit-reached");
 
-    selectedFile = null;
-    fileInput.value = "";
-    fileSelected.hidden = true;
-
+    resetFileSelection();
     hideError();
 
     summaryOutput.textContent = EMPTY_TEXT.summary;
     summaryOutput.classList.remove("filled");
 
-    fillList(actionItemsOutput, null, EMPTY_TEXT.action_items);
-    fillList(keyDecisionsOutput, null, EMPTY_TEXT.key_decisions);
-    fillList(openQuestionsOutput, null, EMPTY_TEXT.open_questions);
+    // Reset all list outputs properly matching fillList parameters!
+    fillList("action_items", actionItemsOutput, null, EMPTY_TEXT.action_items[0]);
+    fillList("key_decisions", keyDecisionsOutput, null, EMPTY_TEXT.key_decisions[0]);
+    fillList("open_questions", openQuestionsOutput, null, EMPTY_TEXT.open_questions[0]);
 
     tokenInput.textContent = "--";
     tokenOutput.textContent = "--";
@@ -269,12 +311,15 @@
   // ==========================================================================
   document.querySelectorAll(".copy-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
+      if (btn.disabled) return;
       const target = btn.dataset.copyTarget;
       const text = getCardText(target);
+      if (text) {
       copyToClipboard(text);
       showToast("Copied to clipboard");
-    });
+    }
   });
+});
 
   function getCardText(target) {
     if (!lastResult) return "";
@@ -353,7 +398,6 @@
   function showToast(message) {
     toast.textContent = message;
     toast.hidden = false;
-    // force reflow so the transition triggers
     void toast.offsetWidth;
     toast.classList.add("show");
 
