@@ -211,15 +211,14 @@ pip install -r requirements.txt
 
 ---
 
-## 👨‍💻 Future Improvements
+## 👨‍💻 Bonus Features
 
-- PDF and DOCX support
-- Meeting transcript speaker identification
+- Upload to text file
 - Export summary to PDF
-- Authentication
-- Meeting history
-- Multiple AI model support
-- Dark mode
+- Token usage display
+- Retry on API failure
+- Copy-to-clipboard button
+
 
 ---
 
