@@ -1,89 +1,228 @@
-# Meeting Notes Summarizer
+# 📝 Meeting Notes Summarizer
 
-A fully working frontend + backend prototype for a meeting-notes summarization
-tool. The AI model is **not yet integrated** — the backend currently returns
-hardcoded placeholder data so the entire product can be built, tested, and
-demoed end-to-end before any AI dependency exists.
+A Flask-based web application that automatically summarizes meeting notes using Amazon Bedrock. Users can either paste meeting notes directly into the application or upload a `.txt` file. The application generates an executive summary, extracts action items, identifies key decisions, and highlights open questions using an LLM.
 
-## Tech stack
+---
 
-- Python 3.11+
+## 🚀 Features
+
+- Paste meeting notes directly into the web interface
+- Upload `.txt` meeting transcripts
+- Executive summary generation
+- Action item extraction
+- Key decision identification
+- Open question detection
+- Token usage statistics
+- Input validation and error handling
+- Clean and responsive user interface
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+### Backend
+- Python
 - Flask
-- HTML5 / CSS3 / Vanilla JavaScript (no frontend framework, no build step)
-- python-dotenv for environment variables
 
-## Project structure
+### AI & Cloud
+- Amazon Bedrock
+- Claude Model
+- boto3 (AWS SDK)
+
+---
+
+## 📂 Project Structure
 
 ```
-meeting-summarizer/
-├── app.py               Flask app: routes, validation, placeholder response
+Meeting-Notes-Summarizer/
+│
+├── app.py                  # Flask application
+├── config.py               # Configuration settings
+├── llm_client.py           # Amazon Bedrock integration
+├── prompts.py              # System prompt
 ├── requirements.txt
 ├── README.md
-├── .gitignore
 ├── .env.example
+├── .gitignore
+│
 ├── templates/
-│   └── index.html       Main UI
+│   └── index.html
+│
 ├── static/
 │   ├── style.css
 │   └── script.js
-└── uploads/              (unused for persistence — files are read in-memory)
+│
+├── uploads/
+│
+└── test_samples/
 ```
 
-## Setup
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
 
 ```bash
-cd meeting-summarizer
+git clone https://github.com/yourusername/Meeting-Notes-Summarizer.git
+cd Meeting-Notes-Summarizer
+```
+
+### 2. Create a virtual environment
+
+Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+macOS/Linux
+
+```bash
 python3 -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
-cp .env.example .env
+```
+
+### 4. Configure environment variables
+
+Create a `.env` file using `.env.example`.
+
+Example:
+
+```env
+AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
+AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
+AWS_REGION=us-east-1
+MODEL_ID=anthropic.claude-haiku-4-5-20251001-v1:0
+
+FLASK_DEBUG=True
+PORT=5000
+```
+
+---
+
+## ▶️ Running the Application
+
+```bash
 python app.py
 ```
 
-Then open **http://localhost:5000** in your browser.
+Open your browser and visit
 
-## How it works today
-
-1. User pastes text or uploads a `.txt` file in the UI.
-2. Frontend sends it to `POST /generate` via `fetch()` (no page reload).
-3. Backend validates the input (empty check, file type, file size, character
-   limit) and returns a **hardcoded** JSON payload from
-   `generate_summary_placeholder()` in `app.py`.
-4. Frontend renders the response into the five result cards.
-
-No AI provider, API key, or network call to any model is used anywhere in
-this codebase yet.
-
-## Plugging in real AI later
-
-Everything is intentionally isolated so that adding AWS Bedrock (GPT-OSS-20B)
-or another provider requires editing **one function**:
-
-```python
-# app.py
-def generate_summary_placeholder(meeting_notes_text: str) -> dict:
-    ...
+```
+http://localhost:5000
 ```
 
-Replace its body with a real model call, keeping the same return shape:
+---
 
-```python
+## 📋 How It Works
+
+1. User enters meeting notes or uploads a `.txt` file.
+2. Flask validates the input.
+3. The backend sends the meeting notes to Amazon Bedrock.
+4. Claude generates a structured response.
+5. The application displays:
+
+- Executive Summary
+- Action Items
+- Key Decisions
+- Open Questions
+- Token Usage
+
+---
+
+## 📥 Supported Input
+
+✔ Plain text
+
+✔ `.txt` files
+
+Maximum upload size: **5 MB**
+
+Maximum text length: **10,000 characters**
+
+---
+
+## 📤 Example Output
+
+```json
 {
-  "summary": str,
-  "action_items": list[str],
-  "key_decisions": list[str],
-  "open_questions": list[str],
-  "token_usage": {"input": int, "output": int, "total": int}
+  "summary": "The team discussed the upcoming product launch and finalized deployment plans.",
+
+  "action_items": [
+    "Rahul: Complete authentication API by Friday",
+    "Alice: Begin UI testing after API completion"
+  ],
+
+  "key_decisions": [
+    "Production release postponed by one week"
+  ],
+
+  "open_questions": [
+    "Which payment gateway vendor will be selected?"
+  ],
+
+  "token_usage": {
+    "input": 210,
+    "output": 145,
+    "total": 355
+  }
 }
 ```
 
-No other file needs to change — the route, validation, and the entire
-frontend already expect exactly this contract.
+---
 
-## Notes
+## 🔒 Environment Variables
 
-- Uploaded files are read directly from the in-memory request stream; they
-  are **not** written to disk or persisted (`uploads/` exists for future use
-  only).
-- Max upload size: 5MB. Max pasted text: 10,000 characters.
-- Only `.txt` files are accepted.
+| Variable | Description |
+|----------|-------------|
+| AWS_ACCESS_KEY_ID | AWS Access Key |
+| AWS_SECRET_ACCESS_KEY | AWS Secret Access Key |
+| AWS_REGION | AWS Region |
+| MODEL_ID | Bedrock Model ID |
+| FLASK_DEBUG | Flask Debug Mode |
+| PORT | Application Port |
+
+---
+
+## 📦 Dependencies
+
+- Flask
+- python-dotenv
+- boto3
+
+Install using
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 👨‍💻 Future Improvements
+
+- PDF and DOCX support
+- Meeting transcript speaker identification
+- Export summary to PDF
+- Authentication
+- Meeting history
+- Multiple AI model support
+- Dark mode
+
+---
+
+## 📄 License
+
+This project is intended for educational and learning purposes.
