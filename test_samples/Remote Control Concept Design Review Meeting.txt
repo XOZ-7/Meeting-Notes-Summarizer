@@ -1,0 +1,56 @@
+speaker: Project Manager
+content: So we come to the third meetings . I have gap good .       
+speaker: Industrial Designer
+content: vocalsound       
+speaker: Project Manager
+content: Um so in the last meeting we have discussed the functional design and now we will talk about the conceptual design . So we will talk about some specific details .       
+speaker: Industrial Designer
+content: Okay so I think I will do my presentation on the components concept so can you please uh open uh disfmarker I'm participant two .        
+speaker: Project Manager
+content: This disfmarker
+speaker: Industrial Designer
+content: Components design .
+speaker: Project Manager
+content: gap        
+speaker: Industrial Designer
+content: Okay so uh the first thing uh I have done is to to made a review together with the uh manufactural uh department and have which components was uh available to build a remote control . So for energy sources we have we have to choose between the solar energy  hand dynamo and uh kinetic um well uh kinetic uh technique vocalsound to to store the energy .       
+speaker: User Interface
+content: vocalsound
+speaker: Marketing
+content: vocalsound
+speaker: Industrial Designer
+content: We also um vocalsound we also can put a regular battery in the in the remote control . Now disfmarker
+speaker: Project Manager
+content: Uh this is what we have decided in the last meeting . But if we use battery disfmarker
+speaker: Industrial Designer
+content: Yeah b uh f well uh I meant uh by by battery I meant uh I will not have a uh a wire between the remote control and the energy source but uh I didn't fou we didn't decide yet which kind of battery we will put inside the the remote . So uh it's a point to discuss . Then uh the case material we have uh uh also several choices  like wood  rubber  titanium or latex . vocalsound But uh well it's not a a re uh well a real issue for the vocalsound disfmarker from the technical uh point of view . Concerning the interface uh we can we can put mm just simple buttons or scrolls or buttons uh much more complicated  but it also requires that the chip to process the button is more complicated so .
+speaker: User Interface
+content: Mm .
+speaker: Industrial Designer
+content: vocalsound And uh this is the last point  the choice of chips . So what I have f found is that I think basic battery or kinetic uh energy uh collection is the is the better way to provide energy because I think solar energy wi won't work vocalsound in a cluttered uh vocalsound uh environment .       
+speaker: User Interface
+content: Mm .        
+speaker: Industrial Designer
+content: So um so I think we can start with these two main things . For the case uh well uh I think that uh titanium is um is a good choice because it's trendy and it's uh it's uh well it's modern and uh user are are are disfmarker mm will be uh very happy to have a vocalsound a a nice remote . For the interface uh I think that we can ach achieve uh all the desired functionalities by s just uh using uh rubber buttons  simple buttons and th thus this allow to use a regular chip vocalsound that are uh well cheaper . vocalsound        
+speaker: User Interface
+content: Mm .
+speaker: Industrial Designer
+content: And s so uh we can move to the next slide .
+speaker: User Interface
+content: Sorry .
+speaker: Industrial Designer
+content: Yeah .   
+speaker: User Interface
+content: What is this single curved disfmarker what does it mean ?
+speaker: Industrial Designer
+content: Well uh uh i i it's uh it's the the shape of the um of the remote .
+speaker: User Interface
+content: So it's it's not disfmarker
+speaker: Industrial Designer
+content: You you will have the disfmarker well um the the curve will fit into your hand when you grab the disfmarker
+speaker: User Interface
+content: Yo l yeah . When you hold on it  it is comfortable to hold .
+speaker: Industrial Designer
+content: Yeah . It's more confog f comfortable that if these uh it's completely flat .
+speaker: User Interface
+content: Okay . Yeah . And the battery  is it kind of a rechargeable or it doesn't matter ?

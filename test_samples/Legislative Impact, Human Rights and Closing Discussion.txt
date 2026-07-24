@@ -1,0 +1,187 @@
+ {
+            "speaker": "Lynne Neagle AM",
+            "content": "Okay, thank you. Suzy, you've got a supplementary on that."
+        },
+        {
+            "speaker": "Suzy Davies AM",
+            "content": "Yes. In the same session this morning I thought this was an interesting question raised by a parent, on the rights of the child side of things, where if a parent offers a child two forms of punishment because that child has done something that they know they shouldn't have, and they're given the option of, 'You can have a quick smack and a cwtch, or you're going to your bedroom for quarter of an hour', and the child is allowed to choose and the child chooses the smack, what happens then? I'm not offering any views on the fact that this choice has been given, but it was put to us today about how would that fall in the law once it were changed."
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "That's a really interesting question. There is a body of law that\u2014"
+        },
+        {
+            "speaker": "Suzy Davies AM",
+            "content": "A child can't consent to assault."
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "Yes, you can't consent to a serious assault, apart from in certain\u2014. The law is really quite difficult. So, for example, tattooing is a serious assault on one level, but you can consent to a tattoo. I can think of one case where a man branded his initials on a woman's buttocks, but she consented to it and the Court of Appeal held that they could consent to that. I can also think of a series of cases, which I won't get into here, that involve sadomasochistic behaviour between adults, some of which was really serious, and involved people willingly applying themselves to things that no sane person would do. And the Court of Appeal in that case, a case called Brown, said, 'No, that's going too far\u2014you can't consent to that.' Then, you may have seen there was a case from the midlands recently where a gentleman operating a tattoo parlour was also involved in body surgery\u2014splitting people's tongues. That went too far as well. So, there is again\u2014I referred before to the spectrum of offending, and there is a clear spectrum of offending that you can realistically consent to and then you get to offending you can't consent to. So, the law has considered that in some depth. I'm still not entirely clear, and I speak as a lawyer. When it comes to much lesser assaults, the law is more unclear as to what you can consent to."
+        },
+        {
+            "speaker": "Suzy Davies AM",
+            "content": "Yes, because we're talking below a certain standard here as well. Okay."
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "As to what you can consent to, it's less clear. It would need to be developed."
+        },
+        {
+            "speaker": "Suzy Davies AM",
+            "content": "Okay, thank you for that."
+        },
+        {
+            "speaker": "Lynne Neagle AM",
+            "content": "Thank you. Vikki."
+        },
+        {
+            "speaker": "Vikki Howells AM",
+            "content": "Thank you. I've got one further series of questions around out-of-court disposals, which you've already mentioned briefly. In your written evidence, you say there's ongoing work exploring diversion rather than prosecution in respect of this Bill. Firstly, could you tell us a bit more about the work that is being done to explore this as an option?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "We've been working with the National Police Chiefs' Council. Their lead is deputy chief constable Sara Glen. She is responsible for developing the police approach to out-of-court disposals and simplifying the range of out-of-court disposals. There is quite a range, and life would be simpler and clearer to have fewer types of disposal with more clarity about what each one of them involved. I must say, this is primarily a matter for the police, because there are a great many offences or reports of crime that do not reach the CPS because they are dealt with by way of an out-of-court disposal. Any case that the police refer to us for a charging decision is going to be something\u2014. There's a document called the director's guidance on charging, which is issued by the director of public prosecutions, which sets out offences the police may charge and offences the CPS may charge. Offences that the police refer to us for a charging decision will generally be offences where they feel that there should be a prosecution rather than an out-of-court disposal. There may be cases where it's genuinely very difficult to assess what's the best approach, in which case we will have a conversation with them, a meaningful conversation, about what's the best way to approach that particular case. There will also be cases, and we see these not that rarely, where the police will bring a case to us for a prosecution on the basis that satisfies the evidential stage and satisfies the public interest stage, and we take a different view on the public interest stage. So, we might say\u2014for example, it involves a 15-year-old youth\u2014we\u00a0 think that diversion from the criminal justice system is a better disposal and we decide not to prosecute. We aren't responsible for administering\u00a0the out-of-court disposal or indeed monitoring compliance with that disposal, if, for example, it has conditions attached, such as repayment of the damage caused to a window or a front gate. That's not our responsibility\u2014that will fall to the police\u2014but we can decide that an out-of-court disposal is a more appropriate disposal than a prosecution. Does that help?"
+        },
+        {
+            "speaker": "Vikki Howells AM",
+            "content": "It does. One final question on that then: creating a body of out-of-court disposals that are specific to this Bill\u2014how would that actually work in practice do you think, given the fact that the Assembly's legislative competence to make provision on the face of the Bill is limited?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "The way I might see it is that, clearly, policing's not devolved, the CPS is not devolved\u2014the way I might see this is that, within Wales, you could build an infrastructure that provides for a range of out-of-court disposals. You can't direct the police or the CPS to point people towards that, but, if you build a good infrastructure, it's more likely that people will be pointed in that direction."
+        },
+        {
+            "speaker": "Vikki Howells AM",
+            "content": "And who would build that infrastructure, in your opinion?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "Somewhere within Wales\u2014Welsh Government, local authorities, the police working in partnership. It may be that the police and crime commissioners use some of their commissioning powers to work something up. I'm not the right person to answer that question."
+        },
+        {
+            "speaker": "Vikki Howells AM",
+            "content": "Okay. Thank you, Chair."
+        },
+        {
+            "speaker": "Lynne Neagle AM",
+            "content": "Thank you. If I could just ask about awareness raising, then: you mentioned the Bill in Scotland, but that Bill includes a duty on the Government to raise awareness of the change. There's no such duty proposed in this Bill. Do you think that's right or should this committee be saying that there should be a similar duty imposed in Wales?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "I'm not sure it's for me to say whether there should be a duty or not. I can, however, say that I think the greater the level of awareness, the more likely it is that the Act, if passed, will achieve its intentions."
+        },
+        {
+            "speaker": "Lynne Neagle AM",
+            "content": "Okay, thank you. And, in your written evidence, you mentioned the fact that there's no indication of any plans for awareness raising in England and that if a person from England is being prosecuted in Wales as a result of this change, a question could arise about the lack of knowledge about the different provisions that apply in Wales. Can I ask what approach the CPS currently takes in Wales if a law is unintentionally broken by someone who's come from outside the UK, for example?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "It's straightforward: if someone comes to this country and commits an offence here\u2014by this country, I'd say England or Wales; I'd treat them as one for these purposes\u2014if someone comes from abroad and commits an offence that isn't an offence in their country, but is an offence here, then I'm afraid that ignorance of the law is no defence. So, raising awareness is important, and I saw, and I was pleased to see, that the media publicity surrounding this proposed legislation, which is now going through, reached as far afield as New York and had widespread media coverage across England and Wales, and I think the Government would be well placed here to take advantage of that willingness of the media to explore something, which is potentially divisive, and I think you've probably seen some of that. Anything like that is a good story, and a good story gets out there, which means you're more likely to make people aware of it."
+        },
+        {
+            "speaker": "Lynne Neagle AM",
+            "content": "Okay, thank you. We've got some questions now on the unintended consequences from Si\u00e2n Gwenllian."
+        },
+        {
+            "speaker": "Sian Gwenllian AM",
+            "content": "Yes, we've discussed some of these already, but, for example, under the new law, or the proposed law, would one unintended consequence be that, if someone living in Wales who can't use the reasonable punishment defence\u2014would their life prospects be different compared to those people in England, who will be able to use that defence? I think you've mentioned that in your written evidence."
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "Yes. Okay. A simple answer: if somebody in Wales is convicted\u2014so, if it goes towards the end of the spectrum that is serious, which results in a prosecution\u2014. It may be\u2014the sort of circumstance I can see happening here is somebody who takes a principled stand and declines any form of out-of-court disposal and says, 'Prosecute me'. We probably would end up prosecuting, because it's a relatively serious offence. So, let's say it comes to court and let's say they end up being convicted of assaulting their child\u2014in circumstances that would not have happened in England\u2014then they would have a criminal conviction they wouldn't have in England, and that, inevitably, has an impact upon their life prospects. But I think, along the road there, there would have been an element of choice."
+        },
+        {
+            "speaker": "Sian Gwenllian AM",
+            "content": "Okay. And do you think that that would be an isolated incident?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "Yes, truly, I believe, an isolated incident. I've said before that I would be very surprised if we even had referrals that reached double figures on these cases. They're likely to be very limited. When the CPS was asked to conduct a survey across all of England and Wales\u2014this was the review in 2007\u2014it spanned just over a two-year period, and there were 12 cases that were brought up at that stage. Now, I have to say, I don't think that's entirely reliable, but it is indicative. We had a Freedom of Information Act request at one stage, which threw up something like three cases in a year. So, if you think about that as being all of England and Wales\u2014and we make up about 5 per cent of the volume of criminal prosecutions nationally\u2014you can see why I might say the numbers are likely to be small, for the reasons we've explored about getting past the evidential stage into the public interest."
+        },
+        {
+            "speaker": "Sian Gwenllian AM",
+            "content": "Thank you for that. In terms of thinking about another kind of unintended consequence, in terms of managing performance and all of the targets that the police need to reach, are we perhaps going to see some people going through the criminal justice system in an inappropriate way and contrary to the interests of the child, because we need to reach some target in terms of performance measures?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "I have to say I think that extremely unlikely. In the CPS, we don't have targets for securing convictions or not. Clearly, we prosecute if we think that there's a reasonable prospect, a realistic prospect, of conviction and it's in the public interest, but we have no targets. And I would also say, because the numbers here are likely to be so small, any assertion of looking to meet targets\u2014it's a tiny, tiny fragment of a drop in the ocean."
+        },
+        {
+            "speaker": "Sian Gwenllian AM",
+            "content": "What about\u2014? There is a target for unsolved crimes, or unsolved offences. What if they fall into that category? Is that an unintended consequence?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "I'm talking about something I don't have great knowledge of here. There was, at one stage, a series of targets for the police that bore down upon cases that secure what was called a sanction detection, which counted for Home Office figures. That disappeared some years ago. Some individual constabularies may still have targets, but, as far as I'm aware, we don't have a suite of national measures. The police are required to report against this, but we don't have targets. And, in my experience, the police are much more sensible these days than they may have been 20 years ago, in terms of trying to get cases charged in order to meet some notional target. It's much less of an issue than it ever was\u2014much."
+        },
+        {
+            "speaker": "Sian Gwenllian AM",
+            "content": "Okay. We've mentioned this, namely the risk of malicious reporting against parents involved in private family law cases. This happens now, of course. Is that going to increase if we change the law?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "There is greater potential for it to increase. I think the numbers, again, will be tiny, and dwarfed by the number of cases where we have to deal with the fallout between a relationship breakdown between partners\u2014whether they be living within the same house or living in different houses. Regrettably, there are times when children are used as part of this ongoing dispute. Getting into the subtleties of the father, say, smacking the child in a way that was reasonable chastisement or was not reasonable chastisement is probably part of a much bigger piece here. I can see it potentially arising. It's not something that would cause me concern, simply because we already have a well-developed approach to dealing with the way in which we evaluate the evidence from parties who may well have a particular position that they want to reinforce, sometimes through exaggeration of basic facts and sometimes through fabrication."
+        },
+        {
+            "speaker": "Sian Gwenllian AM",
+            "content": "Are there any other unintended consequences that come to your mind if we introduce this law?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "No, I think we've had a pretty helpful canter through most of the circumstances here that might happen. And I can't think of anything else off the top of my head."
+        },
+        {
+            "speaker": "Sian Gwenllian AM",
+            "content": "Finally from me, therefore\u2014another issue, in a way\u2014the European convention on human rights. Would not introducing the new law mean, at some point, that Wales could get itself into difficulty because there is a breach of the human rights convention? And therefore England as well, at some point."
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "Right. How to approach that one? In the 2007 review to which we've referred already, the Government, the then Government, set out its position that it believes that section 58, in the way that it was drafted, is compliant with the European convention. There are various parties who would disagree with that, but that was the then Government's position. If Wales implements this legislation and it becomes part of the law, then, arguably, Wales would be more in compliance with ECHR than not, and England would be less so. But nonetheless, at present, I haven't seen any demurral from the position that was expressed in 2007, which is that they consider that the position that's been adopted with section 58 is compliant with the legislation. It may well be tested by case law; that's the way it's likely to happen. Some of the changes in this arena were driven by case law\u2014so, that case I referred to, Regina v H, which was heard back in 2001 in the Court of Appeal, was significant in helping shape the direction of travel towards section 58."
+        },
+        {
+            "speaker": "Sian Gwenllian AM",
+            "content": "And that case law not necessarily would have to happen within the UK\u2014that case law could come from other countries within the European Union."
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "It could, but I would be a foolish man if I were to say what impact European jurisprudence might have upon us. [Laughter.]"
+        },
+        {
+            "speaker": "Suzy Davies AM",
+            "content": "[Inaudible.]\u2014like common law jurisdictions would be."
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "Yes. At this point in time, that'd be a bit of a punt."
+        },
+        {
+            "speaker": "Lynne Neagle AM",
+            "content": "Yes. Okay. Thank you. Janet."
+        },
+        {
+            "speaker": "Janet Finch-Saunders AM",
+            "content": "Yes. Suzy's touched on this mildly, but, in written evidence, you say that you do not consider that the costs of prosecuting cases made possible by the Bill will be of great significance to the Crown Prosecution Service, and you're basing that, from your evidence here today, on the low numbers of prosecutions. So, we've been asked by individuals, and we've had consultation responses from individuals, who've argued that there is no point creating legislation if people are not prosecuted for breaching it. What's your answer to that?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "There is a huge body of legislation out there that outlaws certain offences, and I think probably about\u2014. There are over\u2014. From memory\u2014please never hold me to this\u2014but, from memory, there are something like 10,000 criminal offences; we probably prosecute 5 per cent of those in any given year. There are some offences on the statute\u2014. I've been prosecuting for 32 years now; there are some offences that I've never come near and probably never will. But, nonetheless, the fact those offences exist sets out in terms what is acceptable and what is not acceptable. So, we have various defences to do with Acts. I remember seeing some about Antarctic stations and offences that might be committed there. Well, they're not something that we do, but it sets out what's tolerant\u2014what's tolerable, sorry, and what isn't. So, the fact that we might not have many prosecutions is, for me, not a reason not to say that we shouldn't signify that certain behaviour is or is not acceptable. Clearly, we don't wish to criminalise everything\u2014that would be a nonsense\u2014or to attempt to set the boundaries by almost micromanaging what individuals do and don't do. The criminal law provides a general framework within which to operate, which most people tend to understand. So, awareness is important and it comes back to that point."
+        },
+        {
+            "speaker": "Janet Finch-Saunders AM",
+            "content": "Thank you. And then the explanatory memorandum says there is a shortage of registered intermediaries who assist child witnesses during police interview and when giving evidence in court. Is this a potential barrier to implementing this proposed law, and are there any other potential barriers you want to raise?"
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "No. It's a potential barrier, but I don't think it is a barrier. There was a shortage of registered intermediaries in Wales, and I know that the Ministry of Justice have taken action to deal with that, and we have had a number of people who are now in a position to act as intermediaries. Now, of course, if they were to decide not to do that anymore, we may have a problem, but, in turn, we would be looking to recruit more people into those positions. So, yes, it has the potential to serve as a barrier, but in practice, I don't think it would be a barrier. I think, particularly given the very low numbers we're talking about, we would be able to manage it. I've got no significant concerns, I have to say."
+        },
+        {
+            "speaker": "Lynne Neagle AM",
+            "content": "Thank you. Well, we've come to the end of our time. Can I thank you for attending, the three of you, and for your answers, which have been fascinating and very clear and most helpful to the committee? You will be sent a transcript following the meeting to check for accuracy. Thank you again for your time in coming here today. Diolch yn fawr."
+        },
+        {
+            "speaker": "Barry Hughes",
+            "content": "Thank you. It's been a pleasure."
+        },
+        {
+            "speaker": "Lynne Neagle AM",
+            "content": "Item 3, then, is papers to note. Paper to note 1 is a letter from me to the Business Committee requesting an extension on the deadline for the Bill, which has now been agreed. Paper to note 2 is a letter from myself to the Deputy Minister for Health and Social Services requesting some further information from CAFCASS Cymru on the Bill. Paper to note 3 is a letter from myself to the Minister for Education regarding Diamond reform implementation ahead of our scrutiny session on 4 July. Are Members happy to note those? Item 4, then. Can I propose in accordance with Standing Order 17.42 that the committee resolves to meet in private for the remainder of the meeting? Are Members content? Thank you."

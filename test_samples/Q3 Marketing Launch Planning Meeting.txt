@@ -1,0 +1,6 @@
+Hannah: Hey guys, quick sync on the Q3 marketing launch. Did everyone review the draft?
+Amanda: Yes! The copy looks solid, but we need to update the landing page hero image.
+Hannah: Good call. Rob, can you swap that out with the new product renders by tomorrow?
+Rob: On it. I'll have the updated assets pushed to S3 by 3 PM.
+Amanda: Also, are we still running the LinkedIn ads starting Monday?
+Hannah: Yes, budget is approved. Let's make sure tracking pixels are verified before launch.

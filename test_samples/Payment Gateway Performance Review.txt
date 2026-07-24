@@ -1,0 +1,6 @@
+David: Thanks for joining, team. We need to address the latency spikes on the payment gateway API.
+Elena: I checked the logs from yesterday's outage. The Redis cache reached max memory capacity around 2 PM.
+Marcus: Should we upgrade the Redis instance node size or adjust TTL settings?
+Elena: Increasing the node size to cache.m6g.large will give us headroom. I can apply the terraform changes during tonight's maintenance window.
+David: Approved. Marcus, please double check that fallback error alerts trigger in Slack if connection pool drops.
+Marcus: Will do. I'll test the webhooks in staging this afternoon.

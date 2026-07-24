@@ -1,0 +1,15 @@
+Meeting Notes 
+Date: 5 July 
+Participants: 
+John 
+Alice 
+Rahul 
+Discussion: 
+The mobile application is delayed because authentication 
+APIs are not yet completed. 
+Rahul will complete the authentication APIs by next Friday. 
+Alice will start UI testing once APIs are available. 
+John suggested postponing the production release by one 
+week. 
+The payment gateway integration is still under discussion 
+because two vendors are being evaluated.
